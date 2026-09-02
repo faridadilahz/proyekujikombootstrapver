@@ -1,0 +1,55 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<div class="d-flex flex-column flex-shrink-0 p-3 text-primary bg-white min-vh-100" style="width: 256px;">
+    <!-- Logo / Brand -->
+    <a href="/admin/dasbor" class="d-flex justify-content-left align-items-left mb-3 text-decoration-none px-2">
+        <span class="fs-4 fw-bold text-primary">Seruli</span>
+    </a>
+
+    <hr class="border-secondary mt-1 mb-3">
+
+    <!-- Menu Utama -->
+    <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a href="/admin/dasbor" class="nav-link text-primary {{ request()->is('admin/dasbor*') ? 'active text-white' : '' }}" aria-current="page">
+                <i class="fa-solid fa-house me-3 width-fixed"></i>
+                Dasbor
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/admin/berita" class="nav-link text-primary {{ request()->is('admin/berita*') ? 'active text-white' : '' }}">
+                <i class="fa-solid fa-newspaper me-3 width-fixed"></i>
+                Kelola Berita
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/admin/galeri" class="nav-link text-primary {{ request()->is('admin/galeri*') ? 'active text-white' : '' }}">
+                <i class="fa-solid fa-image me-3 width-fixed"></i>
+                Kelola Galeri
+            </a>
+        </li>
+    </ul>
+
+    <!-- 🟢 Tambah mt-auto di ul bawah biar terdorong ke paling bawah -->
+    <ul class="nav nav-pills flex-column mt-auto">
+        <hr class="border-secondary my-3">
+        
+        <li class="nav-item">
+            <a href="/admin/akun" class="nav-link text-primary {{ request()->is('admin/akun*') ? 'active text-white' : '' }}">
+                <i class="fa-solid fa-user me-3 width-fixed"></i>
+                Akun
+            </a>
+        </li>
+        <li class="nav-item">
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="nav-link text-danger w-100 text-start border-0 bg-transparent">
+                    <i class="fa-solid fa-right-from-bracket me-3 width-fixed"></i>
+                    Keluar
+                </button>
+            </form>
+        </li>
+    </ul>
+</div>
