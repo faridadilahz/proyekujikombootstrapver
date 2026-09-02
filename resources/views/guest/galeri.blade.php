@@ -20,6 +20,21 @@
         <div class="py-5" style="background-color: #F5F5F5">
             <div class="container">
                 <h2 class="text-center fw-bold">Galeri Seruli</h2>
+
+                <div class="container mb-4">
+                    <div class="row justify-content-center">
+                        <div class="col-6">
+                            <form action="/galeri" method="GET">
+                                <div class="input-group">
+                                    <input type="text" name="search" class="form-control"
+                                        placeholder="Cari galeri...">
+                                    <button class="btn btn-outline-success p-2" type="submit">Cari</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row g-4">
                     @include('partials.guest.cardgaleri')
                 </div>
