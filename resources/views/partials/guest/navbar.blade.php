@@ -1,10 +1,10 @@
 @vite(['resources/js/app.js'])
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-5 fixed-top z-3 p-3">
-    <a class="navbar-brand fw-bold" href="/beranda">Seruli</a> 
+    <a class="navbar-brand fs-4 fw-bold" href="/beranda">Seruli</a> 
 
     <div class="collapse navbar-collapse position-absolute start-50 translate-middle-x" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
+        <ul class="navbar-nav mx-auto fs-5">
             <li class="nav-item-active me-4">
                 <a class="nav-link {{  request()->is('beranda') || request()->is('/') ? 'active' : '' }}" href="/beranda">Beranda</a>
             </li>
