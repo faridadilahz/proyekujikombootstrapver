@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\Beritas;
+use App\Models\Galeris;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -12,9 +14,26 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $admin = Admin::latest()->get();
+        $totalBerita = Beritas::count();
+        $totalGaleri = Galeris::count();
 
-        return view('admin.dasbor', compact('dasbor'));
+        $lastBerita = Beritas::latest()->first();
+        $lastGaleri = Galeris::latest()->first();
+
+        $lastBeritaText = $lastBerita 
+            ? 'Terakhir ' . $lastBerita->created_at->diffForHumans() 
+            : 'Belum ada postingan';
+
+            $lastGaleriText = $lastGaleri
+            ? 'Terakhir ' . $lastGaleri->created_at->diffForHumans() 
+            : 'Belum ada postingan';
+
+            return view('admin.dasbor', compact(
+                'totalBerita',
+                'totalGaleri',
+                'lastBeritaText',
+                'lastGaleriText'
+            ));
     }
 
     /**

@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BeritasController;
-use App\Http\Controllers\GalerisController  ;
+use App\Http\Controllers\GalerisController;
 use App\Http\Controllers\AuthController;
 use App\Models\Beritas;
 
@@ -26,9 +27,7 @@ Route::post('/login', [AuthController::class, 'authenticate']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/admin/dasbor', function() {
-        return view ('admin.dasbor');
-    });
+    Route::get('/admin/dasbor', [AdminController::class, 'index'])->name('admin.dasbor');
 
     Route::get('/admin/profil', function() {
         return view ('admin.profil');

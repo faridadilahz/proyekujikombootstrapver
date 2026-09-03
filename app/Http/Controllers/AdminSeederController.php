@@ -12,7 +12,7 @@ class AdminSeederController extends Controller
      */
     public function index()
     {
-        $
+        
     }
 
     /**
