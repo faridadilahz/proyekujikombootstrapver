@@ -28,4 +28,16 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/dasbor', function() {
         return view ('admin.dasbor');
     });
+
+    Route::get('/admin/berita', function() {
+        return view ('admin.kelolaberita');
+    });
+
+    Route::get('/admin/galeri', function() {
+        return view ('admin.kelolagaleri');
+    });
+
+    Route::get('/admin/profil', function() {
+        return view ('admin.profil');
+    });
 });

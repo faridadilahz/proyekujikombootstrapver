@@ -2,7 +2,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-<div class="d-flex flex-column flex-shrink-0 p-3 text-primary bg-white min-vh-100" style="width: 256px;">
+<div class="d-flex flex-column flex-shrink-0 p-3 text-primary bg-white sticky-top vh-100 overflow-y-auto" style="width: 256px;">
     <!-- Logo / Brand -->
     <a href="/admin/dasbor" class="d-flex justify-content-left align-items-left mb-3 text-decoration-none px-2">
         <span class="fs-4 fw-bold text-primary">Seruli</span>
@@ -37,9 +37,9 @@
         <hr class="border-secondary my-3">
         
         <li class="nav-item">
-            <a href="/admin/akun" class="nav-link text-primary {{ request()->is('admin/akun*') ? 'active text-white' : '' }}">
+            <a href="/admin/profil" class="nav-link text-primary {{ request()->is('admin/profil*') ? 'active text-white' : '' }}">
                 <i class="fa-solid fa-user me-3 width-fixed"></i>
-                Akun
+                Profil
             </a>
         </li>
         <li class="nav-item">

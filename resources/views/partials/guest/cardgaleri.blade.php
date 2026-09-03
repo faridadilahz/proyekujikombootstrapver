@@ -6,7 +6,9 @@
                             <div class="card-body text-center">
                                 <small class="text-secondary d-block mb-2">12 September 2026</small>
                                 <h5 class="card-title fw-bold mb-3">Kunjungan Industri PPLG</h5>
-                                <a href="#" class="btn btn-primary btn-sm fw-semibold">Baca Selengkapnya</a>
+                                <div class="d-flex flex-column">
+                <a href="#" class="btn btn-primary fw-semibold p-2">Baca Selengkapnya</a>
+            </div>
                             </div>
                         </div>
                     </div>
@@ -19,7 +21,9 @@
                             <div class="card-body text-center">
                                 <small class="text-secondary d-block mb-2">10 September 2026</small>
                                 <h5 class="card-title fw-bold mb-3">Workshop Jaringan TJKT</h5>
-                                <a href="#" class="btn btn-primary btn-sm fw-semibold">Baca Selengkapnya</a>
+                                <div class="d-flex flex-column">
+                <a href="#" class="btn btn-primary fw-semibold p-2">Baca Selengkapnya</a>
+            </div>
                             </div>
                         </div>
                     </div>
@@ -32,7 +36,9 @@
                             <div class="card-body text-center">
                                 <small class="text-secondary d-block mb-2">08 September 2026</small>
                                 <h5 class="card-title fw-bold mb-3">Servis Gratis TKRO</h5>
-                                <a href="#" class="btn btn-primary btn-sm fw-semibold">Baca Selengkapnya</a>
+                                <div class="d-flex flex-column">
+                <a href="#" class="btn btn-primary fw-semibold p-2">Baca Selengkapnya</a>
+            </div>
                             </div>
                         </div>
                     </div>

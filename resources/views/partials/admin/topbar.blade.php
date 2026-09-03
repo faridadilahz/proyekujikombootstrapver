@@ -28,7 +28,7 @@
     </div>
 
     <!-- Topbar Right: Action / Search & Buttons -->
-    <div class="topbar-right d-flex align-items-center gap-2">
+    <div class="topbar-right d-flex align-items-center gap-3">
         @if(request()->routeIs('admin.berita') || request()->is('admin/berita'))
             <div class="input-group" style="width: 250px;">
                 <span class="input-group-text bg-light border-end-0">

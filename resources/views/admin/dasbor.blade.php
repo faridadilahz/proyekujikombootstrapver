@@ -18,7 +18,6 @@
         <!-- 🟢 Tambahkan class d-flex di <main> biar Sidebar & Konten berdampingan -->
         <main class="d-flex min-vh-100">
             
-            <!-- 1. Partials Sidebar (Kiri) -->
             @include('partials.admin.sidebar')
 
             <!-- 2. Area Konten Utama (Kanan) -->
