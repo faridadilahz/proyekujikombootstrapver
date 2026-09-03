@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('judulberita');
             $table->string('deskripsiberita');
-            $table->string('kategoriberita');
             $table->string('gambarberita');
             $table->timestamps();
         });

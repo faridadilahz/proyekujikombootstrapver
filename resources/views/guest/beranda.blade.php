@@ -20,7 +20,8 @@
     </header>
     <main>
         <!-- Hero / Section Utama -->
-        <div class="bg-primary text-white text-center d-flex align-items-center justify-content-center min-vh-100">
+        <div class="text-white text-center d-flex align-items-center justify-content-center" 
+     style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(13, 109, 253, 0.500)), url('{{ asset('assets/img/smkn4bogor.jpg') }}'); height: 100vh; background-size: cover; background-position: center;">
             <div class="container">
                 <h1 class="display-4 fw-bold mb-4">Selamat Datang di Website Seruli</h1>
                 <p class="lead mb-4">Website seputar kegiatan sekolah kami.</p>

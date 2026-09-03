@@ -12,7 +12,9 @@ class GalerisController extends Controller
      */
     public function index()
     {
-        //
+        $galeris = Galeris::latest()->get();
+
+        return view('admin.kelolagaleri', compact('galeris'));
     }
 
     /**
@@ -20,7 +22,7 @@ class GalerisController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.postinggaleri');
     }
 
     /**
@@ -28,7 +30,19 @@ class GalerisController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'judulgaleri' => 'required|max:255',
+            'gambargaleri' => 'required|image|mimes:jpg,png,jpeg|max:5120',
+        ]);
+
+        $imagePath = $request->file('gambargaleri')->store('galeri','public');
+
+        Galeris::create([
+            'judulgaleri' => $request->judulgaleri,
+            'gambargaleri' => $imagePath,
+        ]);
+
+        return redirect()->route('galeri')->with('success', 'Galeri berhasil diposting.');
     }
 
     /**
@@ -58,8 +72,11 @@ class GalerisController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Galeris $galeris)
+    public function destroy($id)
     {
-        //
+        $galeris = Galeris::findOrFail($id);
+        $galeris->delete();
+
+        return redirect()->route('galeri')->with('success','Galeri berhasil dihapus.');
     }
 }

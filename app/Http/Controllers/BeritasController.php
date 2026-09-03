@@ -12,7 +12,9 @@ class BeritasController extends Controller
      */
     public function index()
     {
-        //
+        $beritas = Beritas::latest()->get();
+
+        return view('admin.kelolaberita', compact('beritas'));
     }
 
     /**
@@ -20,7 +22,7 @@ class BeritasController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.postingberita');
     }
 
     /**
@@ -28,7 +30,21 @@ class BeritasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'judulberita' => 'required|max:255',
+            'deskripsiberita' => 'required',
+            'gambarberita' => 'required|image|mimes:jpeg,png,jpg|max:5120',
+        ]);
+
+        $imagePath = $request->file('gambarberita')->store('berita','public');
+
+        Beritas::create ([
+            'judulberita' => $request->judulberita,
+            'deskripsiberita' => $request->deskripsiberita,
+            'gambarberita' => $imagePath,
+        ]);
+
+        return redirect()->route('berita')->with('success', 'Berita berhasil diposting.');
     }
 
     /**
@@ -36,7 +52,7 @@ class BeritasController extends Controller
      */
     public function show(Beritas $beritas)
     {
-        //
+
     }
 
     /**
@@ -58,8 +74,11 @@ class BeritasController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Beritas $beritas)
+    public function destroy($id)
     {
-        //
+        $beritas = Beritas::findOrFail($id);
+        $beritas->delete();
+
+        return redirect()->route('berita')->with('success', 'Berita berhasil dihapus.');
     }
 }

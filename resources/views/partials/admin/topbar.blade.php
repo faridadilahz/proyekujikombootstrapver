@@ -36,7 +36,7 @@
                 </span>
                 <input type="text" class="form-control bg-light border-start-0 ps-0" placeholder="Cari Berita..." id="searchBeritaInput">
             </div>
-            <a href="{{ Route::has('admin.berita.posting') ? route('admin.berita.posting') : '/admin/berita/posting' }}" class="btn btn-primary d-flex align-items-center gap-2 fw-semibold">
+            <a href="{{ Route::has('admin.berita.posting') ? route('admin.berita.posting') : '/admin/berita/posting-berita' }}" class="btn btn-primary d-flex align-items-center gap-2 fw-semibold">
                 <i class="fa-solid fa-plus"></i>
                 <span>Posting Berita</span>
             </a>
@@ -48,7 +48,7 @@
                 </span>
                 <input type="text" class="form-control bg-light border-start-0 ps-0" placeholder="Cari Galeri..." id="searchGaleriInput">
             </div>
-            <a href="{{ Route::has('admin.galeri.posting') ? route('admin.galeri.posting') : '/admin/galeri/posting' }}" class="btn btn-primary d-flex align-items-center gap-2 fw-semibold">
+            <a href="{{ Route::has('admin.galeri.posting') ? route('admin.galeri.posting') : '/admin/galeri/posting-galeri' }}" class="btn btn-primary d-flex align-items-center gap-2 fw-semibold">
                 <i class="fa-solid fa-plus"></i>
                 <span>Posting Galeri</span>
             </a>

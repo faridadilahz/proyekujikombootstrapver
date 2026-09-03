@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BeritasController;
-use App\Http\Controllers\GalerisController;
+use App\Http\Controllers\GalerisController  ;
 use App\Http\Controllers\AuthController;
 
 Route::get('/beranda', function () {
@@ -29,15 +29,17 @@ Route::middleware(['auth'])->group(function () {
         return view ('admin.dasbor');
     });
 
-    Route::get('/admin/berita', function() {
-        return view ('admin.kelolaberita');
-    });
-
-    Route::get('/admin/galeri', function() {
-        return view ('admin.kelolagaleri');
-    });
-
     Route::get('/admin/profil', function() {
         return view ('admin.profil');
     });
+    Route::get('/admin/berita', [BeritasController::class, 'index'])->name('berita');
+
+    Route::get('/admin/berita/posting-berita', [BeritasController::class, 'create'])->name('berita.posting');
+    Route::post('/admin/berita', [BeritasController::class, 'store'])->name('berita.store');   
+    Route::delete('admin/berita/{id}', [BeritasController::class, 'destroy'])->name('berita.destroy');
+
+    Route::get('/admin/galeri', [GalerisController::class, 'index'])->name('galeri');
+    Route::get('/admin/galeri/posting-galeri', [GalerisController::class, 'create'])->name('galeri.posting');
+    Route::post('/admin/galeri', [GalerisController::class, 'store'])->name('galeri.store');   
+    Route::delete('/admin/galeri/{id}', [GalerisController::class, 'destroy'])->name('galeri.destroy');
 });
