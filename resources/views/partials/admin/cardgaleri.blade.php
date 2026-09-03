@@ -24,12 +24,12 @@
 
                 <!-- Tombol Aksi (Didorong ke paling bawah card) -->
                 <div class="d-flex flex-column gap-2 mt-auto">
-                    <a href="/admin/galeri/edit/{{ $item->id }}" class="btn btn-primary fw-semibold rounded-2 py-2">
+                    <a href='{{ route('galeri.edit', $item->id) }}'class="btn btn-primary fw-semibold rounded-2 py-2">
                         <i class="fa-solid fa-pen-to-square me-1"></i> Edit
                     </a>
 
                     <!-- Form Hapus galeri -->
-                    <form action="/admin/galeri/{{ $item->id }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus galeri ini?')">
+                    <form action='{{ route('galeri.destroy', $item->id) }}' method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus galeri ini?')">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger fw-semibold rounded-2 py-2 w-100">

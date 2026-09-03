@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Galeris;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class GalerisController extends Controller
 {
@@ -56,17 +57,35 @@ class GalerisController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Galeris $galeris)
+    public function edit($id)
     {
-        //
+        $galeris = galeris::findOrFail($id);
+        return view('admin.editgaleri', compact('galeris'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Galeris $galeris)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'judulgaleri' => 'required|max:255',
+            'gambargaleri' => 'nullable|image|mimes:jpeg,png,jpg|max:5120',
+        ]);
+
+        $galeris = Galeris::findOrFail($id);
+
+        if ($request->hasFile('gambargaleri')) {
+            if($galeris->gambargaleri && Storage::disk('public')->exists($galeris->gambargaleri)){
+                Storage::disk('public')->delete($galeris->gambargaleri);
+            }
+            $galeris->gambargaleri = $request->file('gambargaleri')->store('galeri','public');
+        }
+
+        $galeris->judulgaleri = $request->judulgaleri;
+        $galeris->save();
+
+        return redirect()->route('galeri')->with('success', 'galeri berhasil diperbarui.');
     }
 
     /**

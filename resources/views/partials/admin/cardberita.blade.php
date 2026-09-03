@@ -24,12 +24,12 @@
 
                 <!-- Tombol Aksi (Didorong ke paling bawah card) -->
                 <div class="d-flex flex-column gap-2 mt-auto">
-                    <a href="/admin/berita/edit/{{ $item->id }}" class="btn btn-primary fw-semibold rounded-2 py-2">
+                    <a href= '{{ route('berita.edit', $item->id) }}' class="btn btn-primary fw-semibold rounded-2 py-2">
                         <i class="fa-solid fa-pen-to-square me-1"></i> Edit
                     </a>
 
                     <!-- Form Hapus Berita -->
-                    <form action="/admin/berita/{{ $item->id }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus berita ini?')">
+                    <form action= '{{ route('berita.destroy', $item->id) }}' method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus berita ini?')">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger fw-semibold rounded-2 py-2 w-100">

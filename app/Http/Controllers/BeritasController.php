@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Beritas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BeritasController extends Controller
 {
@@ -58,22 +59,39 @@ class BeritasController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Beritas $beritas)
+    public function edit($id)
     {
-        //
+        $beritas = Beritas::findOrFail($id);
+        return view('admin.editberita', compact('beritas'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Beritas $beritas)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'judulberita' => 'required|max:255',
+            'deskripsiberita' => 'required',
+            'gambarberita' => 'nullable|image|mimes:jpeg,png,jpg|max:5120',
+        ]);
+
+        $beritas = Beritas::findOrFail($id);
+
+        if ($request->hasFile('gambarberita')) {
+            if($beritas->gambarberita && Storage::disk('public')->exists($beritas->gambarberita)){
+                Storage::disk('public')->delete($beritas->gambarberita);
+            }
+            $beritas->gambarberita = $request->file('gambarberita')->store('berita','public');
+        }
+
+        $beritas->judulberita = $request->judulberita;
+        $beritas->deskripsiberita = $request->deskripsiberita;
+        $beritas->save();
+
+        return redirect()->route('berita')->with('success', 'Berita berhasil diperbarui.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy($id)
     {
         $beritas = Beritas::findOrFail($id);
