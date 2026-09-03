@@ -28,11 +28,31 @@ class AdminController extends Controller
             ? 'Terakhir ' . $lastGaleri->created_at->diffForHumans() 
             : 'Belum ada postingan';
 
+            $beritaItems = Beritas::latest()->take(3)->get()->map(function ($item) {
+            $item->tipe = 'Berita';
+            $item->judul = $item->judulberita;
+            $item->deskripsi = $item->deskripsiberita;
+            $item->gambar = $item->gambarberita;
+            return $item;
+        });
+
+        $galeriItems = Galeris::latest()->take(3)->get()->map(function ($item) {
+            $item->tipe = 'Galeri';
+            $item->judul = $item->judulgaleri;
+            $item->gambar = $item->gambargaleri;
+            return $item;
+        });
+
+        $lastPosts = $beritaItems->concat($galeriItems)
+            ->sortByDesc('created_at')
+            ->take(3);
+
             return view('admin.dasbor', compact(
                 'totalBerita',
                 'totalGaleri',
                 'lastBeritaText',
-                'lastGaleriText'
+                'lastGaleriText',
+                'lastPosts'
             ));
     }
 

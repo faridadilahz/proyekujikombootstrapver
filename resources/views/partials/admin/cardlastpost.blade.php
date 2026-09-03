@@ -1,41 +1,34 @@
-<!-- Card Berita 1 -->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card h-100 shadow-sm border-0">
-                            <img src="{{ asset('img/logopplg.jpg') }}" class="card-img-top" alt="Berita 1"
-                                style="height: 200px; object-fit: cover;">
-                            <div class="card-body text-center">
-                                <small class="text-secondary d-block mb-2">12 September 2026</small>
-                                <h5 class="card-title fw-bold">Kunjungan Industri PPLG</h5>
-                                <p class="card-text text-secondary">Siswa kelas XII PPLG melakukan kunjungan ke
-                                    perusahaan teknologi...</p>
-                            </div>
-                        </div>
-                    </div>
+@forelse($lastPosts as $item)
+    <div class="col-md-4 col-sm-6">
+        <div class="card h-100 shadow-sm border-0 rounded-3">
+            <!-- Image & Badge Tipe (Berita / Galeri) -->
+            <div class="position-relative">
+                <img src="{{ asset('storage/' . $item->gambar) }}" 
+                     alt="{{ $item->judul }}" 
+                     class="card-img-top rounded-top-3" 
+                     style="height: 180px; object-fit: cover;">
+                
+                <span class="position-absolute top-0 end-0 badge {{ $item->tipe == 'Berita' ? 'bg-primary' : 'bg-success' }} m-2 px-2 py-1">
+                    {{ $item->tipe }}
+                </span>
+            </div>
 
-                    <!-- Card Berita 2 -->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card h-100 shadow-sm border-0">
-                            <img src="{{ asset('img/logotjkt.jpg') }}" class="card-img-top" alt="Berita 2"
-                                style="height: 200px; object-fit: cover;">
-                            <div class="card-body text-center">
-                                <small class="text-secondary d-block mb-2">10 September 2026</small>
-                                <h5 class="card-title fw-bold">Workshop Jaringan TJKT</h5>
-                                <p class="card-text text-secondary">Pelatihan instalasi fiber optic bersama praktisi
-                                    industri...</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card Berita 3 -->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="card h-100 shadow-sm border-0">
-                            <img src="{{ asset('img/logotkro.jpg') }}" class="card-img-top" alt="Berita 3"
-                                style="height: 200px; object-fit: cover;">
-                            <div class="card-body text-center">
-                                <small class="text-secondary d-block mb-2">08 September 2026</small>
-                                <h5 class="card-title fw-bold">Servis Gratis TKRO</h5>
-                                <p class="card-text text-secondary">Bakti sosial servis sepeda motor gratis untuk
-                                    masyarakat sekitar...</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="card-body d-flex flex-column">
+                <small class="text-secondary d-block mb-2">
+                    {{ $item->created_at->locale('id')->translatedFormat('d F Y') }}
+                </small>
+                <h6 class="card-title fw-bold text-dark mb-2">
+                    {{ Str::limit($item->judul, 40) }}
+                </h6>
+                <p class="card-text text-secondary small mb-0">
+                    {{ Str::limit($item->deskripsi, 70) }}
+                </p>
+            </div>
+        </div>
+    </div>
+@empty
+    <div class="col-12 text-center py-4 text-secondary">
+        <i class="fa-solid fa-folder-open fs-2 mb-2"></i>
+        <p class="mb-0">Belum ada postingan berita atau galeri.</p>
+    </div>
+@endforelse
