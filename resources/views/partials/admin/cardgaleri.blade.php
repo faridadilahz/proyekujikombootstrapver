@@ -42,8 +42,8 @@
     </div>
 @empty
     <!-- Tampilan jika tidak ada galeri -->
-    <div class="col-12  py-5">
-        <div class="text-secondary">
+    <div class="col-12 py-5">
+        <div class="text-secondary text-center">
             <i class="fa-solid fa-newspaper fs-1 mb-3"></i>
             <h5>Belum Ada galeri</h5>
             <p class="small">Klik tombol "Posting galeri" di atas untuk menambahkan galeri baru.</p>

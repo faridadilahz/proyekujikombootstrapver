@@ -1,50 +1,26 @@
+@forelse($beritas as $item)
+
 <!-- Card Berita 1 -->
 <div class="col-md-4 col-sm-6">
     <div class="card h-100 shadow-sm border-0">
-        <img src="{{ asset('img/logopplg.jpg') }}" class="card-img-top" alt="Berita 1"
+        <img src="{{ asset('storage/' .$item->gambarberita) }}" class="card-img-top" alt="Berita 1"
             style="height: 200px; object-fit: cover;">
-        <div class="card-body text-center">
-            <small class="text-secondary d-block mb-2">12 September 2026</small>
-            <h5 class="card-title fw-bold">Kunjungan Industri PPLG</h5>
-            <p class="card-text text-secondary">Siswa kelas XII PPLG melakukan kunjungan ke
-                perusahaan teknologi...</p>
+        <div class="card-body">
+            <small class="text-secondary d-block mb-2">{{ $item->created_at->locale('id')->translatedFormat('d F Y') }}</small>
+            <h5 class="card-title fw-bold">{{ $item->judulberita }}</h5>
+            <p class="card-text text-secondary">{{ $item->deskripsiberita }}</p>
             <div class="d-flex flex-column">
-                <a href="#" class="btn btn-primary fw-semibold p-2">Baca Selengkapnya</a>
+                <a href="berita" class="btn btn-primary fw-semibold p-2">Baca Selengkapnya</a>
             </div>
         </div>
     </div>
 </div>
-
-<!-- Card Berita 2 -->
-<div class="col-md-4 col-sm-6">
-    <div class="card h-100 shadow-sm border-0">
-        <img src="{{ asset('img/logotjkt.jpg') }}" class="card-img-top" alt="Berita 2"
-            style="height: 200px; object-fit: cover;">
-        <div class="card-body text-center">
-            <small class="text-secondary d-block mb-2">10 September 2026</small>
-            <h5 class="card-title fw-bold">Workshop Jaringan TJKT</h5>
-            <p class="card-text text-secondary">Pelatihan instalasi fiber optic bersama praktisi
-                industri...</p>
-            <div class="d-flex flex-column">
-                <a href="#" class="btn btn-primary fw-semibold p-2">Baca Selengkapnya</a>
-            </div>
+@empty
+    <!-- Tampilan jika tidak ada berita -->
+    <div class="col-12 py-5">
+        <div class="text-secondary text-center">
+            <i class="fa-solid fa-newspaper fs-1 mb-3"></i>
+            <h5>Belum Ada Berita</h5>
         </div>
     </div>
-</div>
-
-<!-- Card Berita 3 -->
-<div class="col-md-4 col-sm-6">
-    <div class="card h-100 shadow-sm border-0">
-        <img src="{{ asset('img/logotkro.jpg') }}" class="card-img-top" alt="Berita 3"
-            style="height: 200px; object-fit: cover;">
-        <div class="card-body text-center">
-            <small class="text-secondary d-block mb-2">08 September 2026</small>
-            <h5 class="card-title fw-bold">Servis Gratis TKRO</h5>
-            <p class="card-text text-secondary">Bakti sosial servis sepeda motor gratis untuk
-                masyarakat sekitar...</p>
-            <div class="d-flex flex-column">
-                <a href="#" class="btn btn-primary fw-semibold p-2">Baca Selengkapnya</a>
-            </div>
-        </div>
-    </div>
-</div>
+@endforelse

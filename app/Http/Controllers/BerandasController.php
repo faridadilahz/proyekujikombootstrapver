@@ -3,33 +3,33 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berandas;
+use App\Models\Beritas;
+use App\Models\Galeris;
 use Illuminate\Http\Request;
 
 class BerandasController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+
+    public function showBeranda()
     {
-        //
+        $beritas = Beritas::latest()->take(3)->get();
+        $galeris = Galeris::latest()->take(3)->get();
+
+        return view('guest.beranda', compact('beritas', 'galeris'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function berita()
     {
-        //
+        $beritas = Beritas::latest()->get();
+        return view('guest.berita', compact('beritas'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function galeri()
     {
-        //
+        $galeris = Galeris::latest()->get();
+        return view('guest.galeri', compact('galeris'));
     }
+
 
     /**
      * Display the specified resource.

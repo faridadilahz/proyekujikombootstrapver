@@ -8,6 +8,10 @@ use Psy\CodeCleaner\FunctionContextPass;
 
 class AuthController extends Controller
 {
+    public function showLoginForm() {
+        return view ('auth.login');
+    }
+
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([

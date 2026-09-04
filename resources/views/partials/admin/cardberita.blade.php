@@ -43,7 +43,7 @@
 @empty
     <!-- Tampilan jika tidak ada berita -->
     <div class="col-12  py-5">
-        <div class="text-secondary">
+        <div class="text-secondary text-center">
             <i class="fa-solid fa-newspaper fs-1 mb-3"></i>
             <h5>Belum Ada Berita</h5>
             <p class="small">Klik tombol "Posting Berita" di atas untuk menambahkan berita baru.</p>

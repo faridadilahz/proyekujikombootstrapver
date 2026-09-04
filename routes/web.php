@@ -5,19 +5,18 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BeritasController;
 use App\Http\Controllers\GalerisController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BerandasController;
+use App\Http\Controllers\KontakController;
+use App\Models\Berandas;
 use App\Models\Beritas;
 
-Route::get('/beranda', function () {
-    return view('guest.beranda');
-});
+Route::get('/beranda', [BerandasController::class, 'showBeranda'])->name('guest.beranda');
 
-Route::get('/berita', function () {
-    return view('guest.berita');
-});
+Route::get('/berita', [BerandasController::class, 'berita'])->name('guest.berita');
 
-Route::get('/galeri', function () {
-    return view('guest.galeri');
-});
+Route::get('/galeri', [BerandasController::class, 'galeris'])->name('guest.galeri');
+
+Route::post('/kontak', [KontakController::class, 'store'])->name('kontak.store');
 
 Route::get('/login', function () {
     return view('auth.login');

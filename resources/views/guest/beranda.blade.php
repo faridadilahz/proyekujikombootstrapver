@@ -118,6 +118,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- Section Kontak -->
+        <div class="py-5" style="background-color: #F5F5F5">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-4">Hubungi Kami</h2>
+            </div>
+            @include('partials.guest.kontak')
+        </div>
     </main>
     <footer>
         @include('partials.guest.footer')
