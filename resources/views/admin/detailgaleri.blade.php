@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-bs-theme="light">
     <head>
-        <title>{{ $beritas->judulberita }} - Seruli</title>
+        <title>{{ $galeris->judulgaleri }} - Seruli</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,7 +13,6 @@
             integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
 
     <body>
@@ -22,23 +21,18 @@
         </header>
         <main class="d-flex min-vh-100">
             @include('partials.admin.sidebar')
-
             <div class="container py-4 px-4" style="background-color: #F5F5F5;">
-            <a href="/admin/berita" class="btn btn-primary mb-2">
-                <i class="fa-solid fa-arrow-left me-2"></i>Kembali ke Berita
+            <a href="/admin/galeri" class="btn btn-primary mb-2">
+                <i class="fa-solid fa-arrow-left me-2"></i>Kembali ke Galeri
             </a>
 
-            <h2 class="fw-bold mb-2">{{ $beritas->judulberita }}</h2>
+            <h2 class="fw-bold mb-2">{{ $galeris->judulgaleri }}</h2>
             <small class="text-secondary d-block mb-4">
-                Diposting pada {{ $beritas->created_at->locale('id')->translatedFormat('d F Y, H:i') }} WIB
+                Diposting pada {{ $galeris->created_at->locale('id')->translatedFormat('d F Y, H:i') }} WIB
             </small>
 
-            <img src="{{ asset('storage/' . $beritas->gambarberita) }}" class="img-fluid rounded-3 mb-4 w-100"
+            <img src="{{ asset('storage/' . $galeris->gambargaleri) }}" class="img-fluid rounded-3 mb-4 w-100"
                 style="max-height: 400px; object-fit: cover;">
-
-            <div class="lh-lg text-dark">
-                {!! nl2br(e($beritas->deskripsiberita)) !!}
-            </div>
         </div>
         </main>
         <footer>

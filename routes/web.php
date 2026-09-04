@@ -37,7 +37,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/berita', [BeritasController::class, 'index'])->name('berita');
     Route::get('/admin/berita/posting-berita', [BeritasController::class, 'create'])->name('berita.posting');
     Route::post('/admin/berita', [BeritasController::class, 'store'])->name('berita.store');
-    Route::post('/admin/berita/{id}', [BeritasController::class, 'show'])->name('berita.show');
+    Route::get('/admin/berita/{id}', [BeritasController::class, 'show'])->name('berita.show');
 
     Route::get('/admin/berita/{id}/edit-berita', [BeritasController::class, 'edit'])->name('berita.edit');
     Route::put('/admin/berita/{id}', [BeritasController::class, 'update'])->name('berita.update');
@@ -46,6 +46,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/galeri', [GalerisController::class, 'index'])->name('galeri');
     Route::get('/admin/galeri/posting-galeri', [GalerisController::class, 'create'])->name('galeri.posting');
     Route::post('/admin/galeri', [GalerisController::class, 'store'])->name('galeri.store'); 
+    Route::get('/admin/galeri/{id}', [GalerisController::class, 'show'])->name('galeri.show'); 
 
     Route::get('/admin/galeri/{id}/edit-galeri', [GalerisController::class, 'edit'])->name('galeri.edit');
     Route::put('/admin/galeri/{id}', [GalerisController::class, 'update'])->name('galeri.update');
