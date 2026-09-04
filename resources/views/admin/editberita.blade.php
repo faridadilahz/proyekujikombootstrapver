@@ -13,26 +13,6 @@
             integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
             crossorigin="anonymous" 
         />
-
-        <style>
-        /* Custom Styling Upload Box Garis Putus-putus Presisi UI */
-        .upload-area {
-            border: 2px dashed #D0D5DD;
-            background-color: #FFFFFF;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            cursor: pointer;
-            transition: border-color 0.2s ease-in-out;
-        }
-        .upload-area:hover {
-            border-color: #0D6EFD;
-        }
-        .upload-area i {
-            font-size: 2.5rem;
-            color: #0D6EFD;
-        }
-    </style>
     </head>
 
     <body>
@@ -61,15 +41,12 @@
         </div>
         @endif
 
-        <div class="upload-area shadow-sm" onclick="document.getElementById('gambarberita').click();">
-            <i class="fa-solid fa-cloud-arrow-up mb-2"></i>
-            <p class="mb-1 fw-medium text-dark">Klik untuk mengganti foto</p>
-            <span class="text-secondary small">PNG, JPG maksimal 5 MB</span>
-            <span id="file-name" class="d-block text-primary mt-2 small fw-semibold"></span>
-        </div>
-        <!-- 🟢 Atribut name="gambarberita" -->
-        <input type="file" name="gambarberita" id="gambarberita" class="d-none" accept="image/*" onchange="previewFileName(this)">
-    </div>
+        <div class="mb-4">
+                        <label for="gambarberita" class="form-label text-dark fw-semibold">Gambar Berita</label>
+                        <input type="file" name="gambarberita" id="gambarberita"
+                            class="form-control" accept="image/*" required>
+                        <div class="form-text small text-secondary">Format: PNG, JPG, JPEG (Maksimal 5 MB)</div>
+                    </div>
 
     <!-- 2. Judul Berita (Ubah name jadi judulberita) -->
     <div class="mb-4">

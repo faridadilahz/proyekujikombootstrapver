@@ -53,7 +53,8 @@ class BeritasController extends Controller
      */
     public function show($id)
     {
-        
+     $beritas = Beritas::findOrFail($id);
+        return view('admin.detailberita', compact('beritas'));   
     }
 
     /**

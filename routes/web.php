@@ -37,6 +37,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/berita', [BeritasController::class, 'index'])->name('berita');
     Route::get('/admin/berita/posting-berita', [BeritasController::class, 'create'])->name('berita.posting');
     Route::post('/admin/berita', [BeritasController::class, 'store'])->name('berita.store');
+    Route::post('/admin/berita/{id}', [BeritasController::class, 'show'])->name('berita.show');
 
     Route::get('/admin/berita/{id}/edit-berita', [BeritasController::class, 'edit'])->name('berita.edit');
     Route::put('/admin/berita/{id}', [BeritasController::class, 'update'])->name('berita.update');
