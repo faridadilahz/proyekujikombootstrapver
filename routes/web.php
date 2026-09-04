@@ -13,8 +13,10 @@ use App\Models\Beritas;
 Route::get('/beranda', [BerandasController::class, 'showBeranda'])->name('guest.beranda');
 
 Route::get('/berita', [BerandasController::class, 'berita'])->name('guest.berita');
+Route::get('/berita/{id}', [BerandasController::class, 'showBerita'])->name('guest.detailberita');
 
-Route::get('/galeri', [BerandasController::class, 'galeris'])->name('guest.galeri');
+Route::get('/galeri', [BerandasController::class, 'galeri'])->name('guest.galeri');
+Route::get('/galeri/{id}', [BerandasController::class, 'showGaleri'])->name('guest.detailgaleri');
 
 Route::post('/kontak', [KontakController::class, 'store'])->name('kontak.store');
 

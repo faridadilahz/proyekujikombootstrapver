@@ -8,7 +8,7 @@
                 <small class="text-secondary d-block mb-2">{{ $item->created_at->locale('id')->translatedFormat('d F Y') }}</small>
                 <h5 class="card-title fw-bold mb-3">{{ $item->judulgaleri }}</h5>
                 <div class="d-flex flex-column">
-                    <a href="galeri" class="btn btn-primary fw-semibold p-2">Baca Selengkapnya</a>
+                    <a href={{ route('guest.detailgaleri', $item->id) }} class="btn btn-primary fw-semibold p-2">Baca Selengkapnya</a>
                 </div>
             </div>
         </div>

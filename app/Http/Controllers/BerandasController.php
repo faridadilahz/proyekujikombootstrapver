@@ -24,12 +24,23 @@ class BerandasController extends Controller
         return view('guest.berita', compact('beritas'));
     }
 
+    public function showBerita($id)
+    {
+        $beritas = Beritas::findOrFail($id);
+        return view('guest.detailberita', compact('beritas'));
+    }
+
     public function galeri()
     {
         $galeris = Galeris::latest()->get();
         return view('guest.galeri', compact('galeris'));
     }
 
+    public function showGaleri($id)
+    {
+        $galeris = Galeris::findOrFail($id);
+        return view('guest.detailgaleri', compact('galeris'));
+    }
 
     /**
      * Display the specified resource.

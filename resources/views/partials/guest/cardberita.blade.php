@@ -10,7 +10,7 @@
             <h5 class="card-title fw-bold">{{ $item->judulberita }}</h5>
             <p class="card-text text-secondary">{{ $item->deskripsiberita }}</p>
             <div class="d-flex flex-column">
-                <a href="berita" class="btn btn-primary fw-semibold p-2">Baca Selengkapnya</a>
+                <a href= {{ route('guest.detailberita', $item->id) }} class="btn btn-primary fw-semibold p-2">Baca Selengkapnya</a>
             </div>
         </div>
     </div>
