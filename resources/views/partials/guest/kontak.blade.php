@@ -1,11 +1,16 @@
 <div class="card border-0 rounded-4 p-4 mx-auto" style="max-width: 480px;">
 <form>
-    <div class="mb-4">
+    <div class="mb-3">
         <label for="email">Alamat Email</label>
-        <input type="email" class="form-control" id="email" placeholder="alamatemailanda@gmail.com">
+        <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
     </div>
 
-    <div class="mb-4">
+    <div class="mb-3">
+        <label for="nama">Nama Lengkap</label>
+        <input type="nama" class="form-control" id="nama" placeholder="Ketik nama Anda disini">
+    </div>
+
+    <div class="mb-3">
         <label for="pesan">Pesan</label>
         <input type="pesan" class="form-control" id="pesan" placeholder="Ketik pesan Anda disini">
     </div>

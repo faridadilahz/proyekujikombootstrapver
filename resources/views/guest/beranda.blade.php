@@ -56,40 +56,36 @@
                 <div class="row g-4">
                     <div class="col-md-3 col-sm-6">
                         <div class="card h-100 shadow-sm border-0">
-                            <img src {{ asset('img/logopplg.jpg') }} class="card-img-top" alt="PPLG"
-                                style="height: 180px; object-fit:cover;">
                             <div class="card-body text-center">
                                 <h5 class="card-title fw-semibold">PPLG</h5>
+                                <span class="small text-secondary">Pengembangan Perangkat Lunak dan Gim</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-3 col-sm-6">
                         <div class="card h-100 shadow-sm border-0">
-                            <img src {{ asset('img/logotjkt.jpg') }} class="card-img-top" alt="TJKT"
-                                style="height: 180px; object-fit:cover;">
                             <div class="card-body text-center">
                                 <h5 class="card-title fw-semibold">TJKT</h5>
+                                <span class="small text-secondary">Teknik Jaringan Komputer Telekomunikasi</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-3 col-sm-6">
                         <div class="card h-100 shadow-sm border-0">
-                            <img src {{ asset('img/logotkro.jpg') }} class="card-img-top" alt="TKRO"
-                                style="height: 180px; object-fit:cover;">
                             <div class="card-body text-center">
                                 <h5 class="card-title fw-semibold">TKRO</h5>
+                                <span class="small text-secondary">Teknik Kendaraan Ringan Otomotif</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-3 col-sm-6">
                         <div class="card h-100 shadow-sm border-0">
-                            <img src {{ asset('img/logotpfl.jpg') }} class="card-img-top" alt="TPFL"
-                                style="height: 180px; object-fit:cover;">
                             <div class="card-body text-center">
                                 <h5 class="card-title fw-semibold">TPFL</h5>
+                                <span class="small text-secondary">Teknik Pengelasan dan Fabrikasi Logam</span>
                             </div>
                         </div>
                     </div>
