@@ -57,7 +57,7 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="card-body text-center">
-                                <h5 class="card-title fw-semibold">PPLG</h5>
+                                <h5 class="card-title fw-bold">PPLG</h5>
                                 <span class="small text-secondary">Pengembangan Perangkat Lunak dan Gim</span>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="card-body text-center">
-                                <h5 class="card-title fw-semibold">TJKT</h5>
+                                <h5 class="card-title fw-bold">TJKT</h5>
                                 <span class="small text-secondary">Teknik Jaringan Komputer Telekomunikasi</span>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="card-body text-center">
-                                <h5 class="card-title fw-semibold">TKRO</h5>
+                                <h5 class="card-title fw-bold">TKRO</h5>
                                 <span class="small text-secondary">Teknik Kendaraan Ringan Otomotif</span>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="card-body text-center">
-                                <h5 class="card-title fw-semibold">TPFL</h5>
+                                <h5 class="card-title fw-bold">TPFL</h5>
                                 <span class="small text-secondary">Teknik Pengelasan dan Fabrikasi Logam</span>
                             </div>
                         </div>
