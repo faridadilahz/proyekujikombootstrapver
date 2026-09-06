@@ -64,7 +64,7 @@
                         <div class="mb-4">
                             <label for="gambargaleri" class="form-label text-dark fw-semibold">Gambar Berita</label>
                             <input type="file" name="gambargaleri" id="gambargaleri" class="form-control"
-                                accept="image/*" required>
+                                accept="image/*">
                             <div class="form-text small text-secondary">Format: PNG, JPG, JPEG (Maksimal 5 MB)</div>
                         </div>
 
