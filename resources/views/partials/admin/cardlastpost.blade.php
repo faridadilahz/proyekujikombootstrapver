@@ -7,10 +7,6 @@
                      alt="{{ $item->judul }}" 
                      class="card-img-top rounded-top-3" 
                      style="height: 180px; object-fit: cover;">
-                
-                <span class="position-absolute top-0 end-0 badge {{ $item->tipe == 'Berita' ? 'bg-primary' : 'bg-success' }} m-2 px-2 py-1">
-                    {{ $item->tipe }}
-                </span>
             </div>
 
             <div class="card-body d-flex flex-column">

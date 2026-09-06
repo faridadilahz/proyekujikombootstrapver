@@ -23,21 +23,6 @@
             <a href="/admin/galeri" class="btn btn-primary mb-2">
                 <i class="fa-solid fa-arrow-left me-2"></i>Kembali ke Galeri
             </a>
-
-            <div>
-            <a href= '{{ route('galeri.edit', $galeris->id) }}' class="btn btn-primary mb-2">
-                <i class="fa-solid fa-pen-to-square me-2"></i>Edit
-            </a>
-
-            <form action='{{ route('galeri.destroy', $galeris->id) }}' method="POST"
-                        onsubmit="return confirm('Apakah Anda yakin ingin menghapus galeri ini?')">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger fw-semibold rounded-2 py-2 w-100">
-                            <i class="fa-solid fa-trash me-1"></i> Hapus
-                        </button>
-                    </form>
-            </div>
             </div>
 
             <h2 class="fw-bold mb-2">{{ $galeris->judulgaleri }}</h2>
