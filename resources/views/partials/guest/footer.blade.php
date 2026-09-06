@@ -5,10 +5,10 @@
 <footer class="bg-light text-center">
     <div class="container p-4">
         <section class="mb-4">
-            <a class="btn text-primary btn-floating m-1" href="/#" role="button"><i class="fab fa-facebook-f"></i></a>
-            <a class="btn text-primary btn-floating m-1" href="/#" role="button"><i class="fab fa-instagram"></i></a>
-            <a class="btn text-primary btn-floating m-1" href="/#" role="button"><i class="fab fa-youtube"></i></a>
-            <a class="btn text-primary btn-floating m-1" href="/#" role="button"><i class="fab fa-whatsapp"></i></a>
+            <a class="btn text-primary btn-floating m-1" href="/https://web.facebook.com/profile.php?id=100054636630766" role="button"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn text-primary btn-floating m-1" href="/https://www.instagram.com/smkn4kotabogor/" role="button"><i class="fab fa-instagram"></i></a>
+            <a class="btn text-primary btn-floating m-1" href="/https://www.youtube.com/channel/UC4M-6Oc1ZvECz00MlMa4v_A/videos?app=desktop" role="button"><i class="fab fa-youtube"></i></a>
+            <a class="btn text-primary btn-floating m-1" href="/https://api.whatsapp.com/send/?phone=628212262442" role="button"><i class="fab fa-whatsapp"></i></a>
         </section>
 
         <section class="mb-4">
