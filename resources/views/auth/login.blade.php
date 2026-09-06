@@ -17,8 +17,7 @@
         <!-- place navbar here -->
     </header>
     <main>
-        <div class="d-flex align-items-center justify-content-center"
-            style="background-image: linear-gradient(rgb(13, 109, 253), rgba(13, 109, 253, 0.500)), url('{{ asset('assets/img/smkn4bogor.jpg') }}'); height: 100vh; background-size: cover; background-position: center;">
+        <div class="d-flex bg-primary align-items-center justify-content-center min-vh-100">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-5 col-lg-5">
