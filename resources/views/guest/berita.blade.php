@@ -21,19 +21,6 @@
             <div class="container">
                 <h2 class="text-center fw-bold mb-4">Berita Seruli</h2>
 
-                <div class="container mb-4">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6">
-                            <form action="/berita" method="GET">
-                                <div class="input-group">
-                                    <input type="text" class="form-control search-input" placeholder="Cari berita...">
-                                    <button class="btn btn-outline-success p-2" type="submit">Cari</button>
-                                </div>
-                        </div>
-                        </form>
-                    </div>
-                </div>
-
             <div class="row g-4">
                 @include('partials.guest.cardberita')
             </div>

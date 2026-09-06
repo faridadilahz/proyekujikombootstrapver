@@ -30,24 +30,12 @@
     <!-- Topbar Right: Action / Search & Buttons -->
     <div class="topbar-right d-flex align-items-center gap-3">
         @if(request()->routeIs('admin.berita') || request()->is('admin/berita'))
-            <div class="input-group" style="width: 250px;">
-                <span class="input-group-text bg-light border-end-0">
-                    <i class="fa-solid fa-magnifying-glass text-secondary"></i>
-                </span>
-                <input type="text" class="form-control bg-light border-start-0 ps-0" placeholder="Cari Berita..." id="searchBeritaInput">
-            </div>
             <a href="{{ Route::has('admin.berita.posting') ? route('admin.berita.posting') : '/admin/berita/posting-berita' }}" class="btn btn-primary d-flex align-items-center gap-2 fw-semibold">
                 <i class="fa-solid fa-plus"></i>
                 <span>Posting Berita</span>
             </a>
 
         @elseif(request()->routeIs('admin.galeri') || request()->is('admin/galeri'))
-            <div class="input-group" style="width: 250px;">
-                <span class="input-group-text bg-light border-end-0">
-                    <i class="fa-solid fa-magnifying-glass text-secondary"></i>
-                </span>
-                <input type="text" class="form-control bg-light border-start-0 ps-0" placeholder="Cari Galeri..." id="searchGaleriInput">
-            </div>
             <a href="{{ Route::has('admin.galeri.posting') ? route('admin.galeri.posting') : '/admin/galeri/posting-galeri' }}" class="btn btn-primary d-flex align-items-center gap-2 fw-semibold">
                 <i class="fa-solid fa-plus"></i>
                 <span>Posting Galeri</span>
