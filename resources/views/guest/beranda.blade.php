@@ -21,13 +21,13 @@
     <main>
         <!-- Hero / Section Utama -->
         <div class="text-white text-center d-flex align-items-center justify-content-center"
-            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(13, 109, 253, 0.500)), url('{{ asset('assets/img/smkn4bogor.jpg') }}'); height: 100vh; background-size: cover; background-position: center;">
+            style="background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8)), url('{{ asset('assets/img/smkn4bogor.jpg') }}'); height: 100vh; background-size: cover; background-position: center;">
             <div class="container">
-                <h1 class="display-4 fw-bold mb-4">Selamat Datang di Website Sekolah Seru Sekali</h1>
-                <p class="lead mb-4">Mewujudkan generasi unggul, berkarakter, dan kompeten di bidang teknologi dan kejuruan. Siap kerja, santun, mandiri, dan kreatif.</p>
+                <h1 class="display-4 text-primary fw-bold mb-4">Selamat Datang di Website Sekolah Seru Sekali</h1>
+                <p class="text-secondary mb-4">Mewujudkan generasi unggul, berkarakter, dan kompeten di bidang teknologi dan kejuruan. Siap kerja, santun, mandiri, dan kreatif.</p>
                 <div>
                     <a href="/berita" class="btn btn-primary btn-lg me-2 fw-semibold">Lihat Berita</a>
-                    <a href="/galeri" class="btn btn-outline-light btn-lg fw-semibold">Lihat Berita</a>
+                    <a href="/galeri" class="btn btn-outline-primary btn-lg fw-semibold">Lihat Berita</a>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="text-dark text-center d-flex align-items-center justify-content-center min-vh-100 mw-11"
             style="background-color: #F5F5F5">
             <div class="container">
-                <h1 class="display-6 fw-bold mb-4">Mewujudkan generasi unggul, berkarakter, dan kompeten di bidang
+                <h1 class="display-6 text-primary fw-bold mb-4">Mewujudkan generasi unggul, berkarakter, dan kompeten di bidang
                     teknologi dan kejuruan. Siap kerja, santun, mandiri, dan kreatif.</h1>
                 <p class="lead text-muted mb-4 fw-normal">Sekolah Seru Sekali merupakan salah satu Sekolah Menengah
                     Kejuruan
