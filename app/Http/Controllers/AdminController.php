@@ -17,43 +17,10 @@ class AdminController extends Controller
         $totalBerita = Beritas::count();
         $totalGaleri = Galeris::count();
 
-        $lastBerita = Beritas::latest()->first();
-        $lastGaleri = Galeris::latest()->first();
-
-        $lastBeritaText = $lastBerita 
-            ? 'Terakhir ' . $lastBerita->created_at->diffForHumans() 
-            : 'Belum ada postingan';
-
-            $lastGaleriText = $lastGaleri
-            ? 'Terakhir ' . $lastGaleri->created_at->diffForHumans() 
-            : 'Belum ada postingan';
-
-            $beritaItems = Beritas::latest()->take(3)->get()->map(function ($item) {
-            $item->tipe = 'Berita';
-            $item->judul = $item->judulberita;
-            $item->deskripsi = $item->deskripsiberita;
-            $item->gambar = $item->gambarberita;
-            return $item;
-        });
-
-        $galeriItems = Galeris::latest()->take(3)->get()->map(function ($item) {
-            $item->tipe = 'Galeri';
-            $item->judul = $item->judulgaleri;
-            $item->gambar = $item->gambargaleri;
-            return $item;
-        });
-
-        $lastPosts = $beritaItems->concat($galeriItems)
-            ->sortByDesc('created_at')
-            ->take(3);
-
-            return view('admin.dasbor', compact(
-                'totalBerita',
-                'totalGaleri',
-                'lastBeritaText',
-                'lastGaleriText',
-                'lastPosts'
-            ));
+        return view('admin.dasbor', compact(
+            'totalBerita',
+            'totalGaleri',
+        ));
     }
 
     /**

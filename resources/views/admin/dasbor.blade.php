@@ -26,8 +26,6 @@
 
                     @include('partials.admin.topbar')
                     @include('partials.admin.statistic')
-
-                    @include('partials.admin.lastpost')
                 </div>
             </div>
 
