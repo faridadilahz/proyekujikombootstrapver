@@ -11,20 +11,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <header>
+    <header style>
         @include('partials.guest.navbar')
     </header>
     <main>
         <!-- Hero / Section Utama -->
-        <div class="text-white text-center d-flex align-items-center justify-content-center" 
-     style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(13, 109, 253, 0.500)), url('{{ asset('assets/img/smkn4bogor.jpg') }}'); height: 100vh; background-size: cover; background-position: center;">
+        <div class="text-white text-center d-flex align-items-center justify-content-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(13, 109, 253, 0.500)), url('{{ asset('assets/img/smkn4bogor.jpg') }}'); height: 100vh; background-size: cover; background-position: center;">
             <div class="container">
-                <h1 class="display-4 fw-bold mb-4">Selamat Datang di Website Seruli</h1>
-                <p class="lead mb-4">Website seputar kegiatan sekolah kami.</p>
+                <h1 class="display-4 fw-bold mb-4">Selamat Datang di Website Sekolah Seru Sekali</h1>
+                <p class="lead mb-4">Mewujudkan generasi unggul, berkarakter, dan kompeten di bidang teknologi dan kejuruan. Siap kerja, santun, mandiri, dan kreatif.</p>
                 <div>
                     <a href="/berita" class="btn btn-primary btn-lg me-2 fw-semibold">Lihat Berita</a>
                     <a href="/galeri" class="btn btn-outline-light btn-lg fw-semibold">Lihat Berita</a>
@@ -33,7 +33,8 @@
         </div>
 
         <!-- Tentang -->
-        <div class="text-dark text-center d-flex align-items-center justify-content-center min-vh-100 mw-11" style="background-color: #F5F5F5">
+        <div class="text-dark text-center d-flex align-items-center justify-content-center min-vh-100 mw-11"
+            style="background-color: #F5F5F5">
             <div class="container">
                 <h1 class="display-6 fw-bold mb-4">Mewujudkan generasi unggul, berkarakter, dan kompeten di bidang
                     teknologi dan kejuruan. Siap kerja, santun, mandiri, dan kreatif.</h1>

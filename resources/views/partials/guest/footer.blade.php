@@ -14,7 +14,7 @@
         <section class="mb-4">
             <h2 class="display-12 fw-bold m-3">Sekolah Seru Sekali - Seruli</h2>
             <p>
-                Sekolah Seru Sekali merupakan salah satu Sekolah Menengah Kejuruan negeri unggulan di Kota Bogor yang berkomitmen mencetak lulusan berkarakter, kompeten, dan siap bersaing di dunia industri global. Dengan kurikulum yang terintegrasi dengan kebutuhan industri modern serta fasilitas pembelajaran berbasis teknologi, Sekolah Seru Sekali terus berinovasi dalam melahirkan generasi muda yang ahli di bidangnya.
+                Mewujudkan generasi unggul, berkarakter, dan kompeten di bidang teknologi dan kejuruan. Siap kerja, santun, mandiri, dan kreatif.
             </p>
         </section>
 
