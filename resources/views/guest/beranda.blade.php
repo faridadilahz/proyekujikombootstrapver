@@ -26,7 +26,7 @@
                 <h1 class="display-4 fw-bold mb-4">Selamat Datang di Website Seruli</h1>
                 <p class="lead mb-4">Website seputar kegiatan sekolah kami.</p>
                 <div>
-                    <a href="/berita" class="btn btn-light btn-lg me-2 fw-semibold">Lihat Berita</a>
+                    <a href="/berita" class="btn btn-primary btn-lg me-2 fw-semibold">Lihat Berita</a>
                     <a href="/galeri" class="btn btn-outline-light btn-lg fw-semibold">Lihat Berita</a>
                 </div>
             </div>
